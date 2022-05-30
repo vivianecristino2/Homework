@@ -21,7 +21,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 79,
+   "execution_count": 1,
    "id": "8fae5aab",
    "metadata": {},
    "outputs": [],
@@ -37,7 +37,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 80,
+   "execution_count": 2,
    "id": "0def80b6",
    "metadata": {},
    "outputs": [],
@@ -49,7 +49,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 81,
+   "execution_count": 3,
    "id": "900e6747",
    "metadata": {},
    "outputs": [
@@ -81,7 +81,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 63,
+   "execution_count": 4,
    "id": "dcda906f",
    "metadata": {},
    "outputs": [
@@ -89,22 +89,22 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "mean: 33.60165374677006 median: 33.8485 mode: 0    32.74\n",
-      "Name: Salnty, dtype: float64\n"
+      "mean: 50.80284237726105 median: 45.05 mode: 0    5.9\n",
+      "Name: O2Sat, dtype: float64\n"
      ]
     }
    ],
    "source": [
-    "mean = df['Salnty'].mean()\n",
-    "median = df['Salnty'].median()\n",
-    "mode = df['Salnty'].mode()\n",
+    "mean = df['O2Sat'].mean()\n",
+    "median = df['O2Sat'].median()\n",
+    "mode = df['O2Sat'].mode()\n",
     "\n",
     "print('mean:', mean, 'median:',median, 'mode:', mode)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 64,
+   "execution_count": 5,
    "id": "a48ac0a0",
    "metadata": {},
    "outputs": [
@@ -112,23 +112,23 @@
      "data": {
       "text/plain": [
        "count    774.000000\n",
-       "mean      33.601654\n",
-       "std        0.656640\n",
-       "min       32.160000\n",
-       "25%       32.900000\n",
-       "50%       33.848500\n",
-       "75%       34.187000\n",
-       "max       34.520000\n",
-       "Name: Salnty, dtype: float64"
+       "mean      50.802842\n",
+       "std       37.697035\n",
+       "min        3.400000\n",
+       "25%        9.725000\n",
+       "50%       45.050000\n",
+       "75%       92.100000\n",
+       "max      120.000000\n",
+       "Name: O2Sat, dtype: float64"
       ]
      },
-     "execution_count": 64,
+     "execution_count": 5,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "df['Salnty'].describe()"
+    "df['O2Sat'].describe()"
    ]
   },
   {
@@ -141,7 +141,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 65,
+   "execution_count": 6,
    "id": "2c1072b9",
    "metadata": {},
    "outputs": [
@@ -309,7 +309,7 @@
        "[774 rows x 6 columns]"
       ]
      },
-     "execution_count": 65,
+     "execution_count": 6,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -320,7 +320,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 66,
+   "execution_count": 8,
    "id": "f691caa7",
    "metadata": {},
    "outputs": [
@@ -328,57 +328,21 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "0.6566401437630879\n"
+      "37.697035164794364\n"
      ]
     }
    ],
    "source": [
     "# Desvido\n",
     "\n",
-    "desvio = df['Salnty'].std()\n",
+    "desvio = df['O2Sat'].std()\n",
     "print(desvio)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 74,
-   "id": "2893e56a",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# DEsvio O2Stat\n",
-    "\n",
-    "desvios = df['O2Sat'].std()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 53,
+   "execution_count": 9,
    "id": "9f0d5ffd",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "0.4311762784012086"
-      ]
-     },
-     "execution_count": 53,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "# Variancia \n",
-    "\n",
-    "variancia = st.variance(df['Salnty'])\n",
-    "variancia"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 75,
-   "id": "af70c9ef",
    "metadata": {},
    "outputs": [
     {
@@ -387,16 +351,16 @@
        "1421.066460215744"
       ]
      },
-     "execution_count": 75,
+     "execution_count": 9,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "# Variancia\n",
+    "# Variancia \n",
     "\n",
-    "variancia1 = st.variance(df['O2Sat'])\n",
-    "variancia1"
+    "variancia = st.variance(df['O2Sat'])\n",
+    "variancia"
    ]
   },
   {
@@ -409,48 +373,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 54,
+   "execution_count": 10,
    "id": "5769c41f",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "(array([10.,  1.,  9., 17., 47., 94., 53., 33., 20., 12., 22., 19., 21.,\n",
-       "        23., 34., 80., 74., 72., 76., 57.]),\n",
-       " array([32.16 , 32.278, 32.396, 32.514, 32.632, 32.75 , 32.868, 32.986,\n",
-       "        33.104, 33.222, 33.34 , 33.458, 33.576, 33.694, 33.812, 33.93 ,\n",
-       "        34.048, 34.166, 34.284, 34.402, 34.52 ]),\n",
-       " <BarContainer object of 20 artists>)"
-      ]
-     },
-     "execution_count": 54,
-     "metadata": {},
-     "output_type": "execute_result"
-    },
-    {
-     "data": {
-      "image/png": "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\n",
-      "text/plain": [
-       "<Figure size 432x288 with 1 Axes>"
-      ]
-     },
-     "metadata": {
-      "needs_background": "light"
-     },
-     "output_type": "display_data"
-    }
-   ],
-   "source": [
-    "# Plote \n",
-    "\n",
-    "plt.hist(df['Salnty'], bins =20)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 57,
-   "id": "5dc6d2b6",
    "metadata": {},
    "outputs": [
     {
@@ -464,7 +388,7 @@
        " <BarContainer object of 20 artists>)"
       ]
      },
-     "execution_count": 57,
+     "execution_count": 10,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -482,7 +406,7 @@
     }
    ],
    "source": [
-    "# Plote variavel O2Stat\n",
+    "# Plote \n",
     "\n",
     "plt.hist(df['O2Sat'], bins =20)"
    ]
@@ -497,68 +421,29 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 55,
+   "execution_count": 11,
    "id": "df25d934",
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "3.0976639377055706e-42"
+       "-2.9037855714601697e-36"
       ]
      },
-     "execution_count": 55,
+     "execution_count": 11,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
     "# assimetria \n",
-    "media = df['Salnty'].mean()\n",
-    "desvio = df['Salnty'].std()\n",
-    "numerador = sum(df['Salnty']- df['Salnty'].mean())**4\n",
-    "denominador = (desvio)**4\n",
+    "media = df['O2Sat'].mean()\n",
+    "desvio = df['O2Sat'].std()\n",
+    "numerador = sum(df['O2Sat']- df['O2Sat'].mean())**3\n",
+    "denominador = (desvio)**3\n",
     "assimetria = numerador/denominador\n",
     "assimetria"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 83,
-   "id": "f83b4257",
-   "metadata": {},
-   "outputs": [
-    {
-     "ename": "KeyError",
-     "evalue": "'O2Stat'",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[1;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\core\\indexes\\base.py:3621\u001b[0m, in \u001b[0;36mIndex.get_loc\u001b[1;34m(self, key, method, tolerance)\u001b[0m\n\u001b[0;32m   3620\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[1;32m-> 3621\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_engine\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mget_loc\u001b[49m\u001b[43m(\u001b[49m\u001b[43mcasted_key\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   3622\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mKeyError\u001b[39;00m \u001b[38;5;28;01mas\u001b[39;00m err:\n",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\_libs\\index.pyx:136\u001b[0m, in \u001b[0;36mpandas._libs.index.IndexEngine.get_loc\u001b[1;34m()\u001b[0m\n",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\_libs\\index.pyx:163\u001b[0m, in \u001b[0;36mpandas._libs.index.IndexEngine.get_loc\u001b[1;34m()\u001b[0m\n",
-      "File \u001b[1;32mpandas\\_libs\\hashtable_class_helper.pxi:5198\u001b[0m, in \u001b[0;36mpandas._libs.hashtable.PyObjectHashTable.get_item\u001b[1;34m()\u001b[0m\n",
-      "File \u001b[1;32mpandas\\_libs\\hashtable_class_helper.pxi:5206\u001b[0m, in \u001b[0;36mpandas._libs.hashtable.PyObjectHashTable.get_item\u001b[1;34m()\u001b[0m\n",
-      "\u001b[1;31mKeyError\u001b[0m: 'O2Stat'",
-      "\nThe above exception was the direct cause of the following exception:\n",
-      "\u001b[1;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
-      "Input \u001b[1;32mIn [83]\u001b[0m, in \u001b[0;36m<cell line: 3>\u001b[1;34m()\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[38;5;66;03m# assimetria O2Stat\u001b[39;00m\n\u001b[1;32m----> 3\u001b[0m mediaa \u001b[38;5;241m=\u001b[39m \u001b[43mdf\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mO2Stat\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m]\u001b[49m\u001b[38;5;241m.\u001b[39mmean()\n\u001b[0;32m      4\u001b[0m desvioo \u001b[38;5;241m=\u001b[39m df[\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mO2Stat\u001b[39m\u001b[38;5;124m'\u001b[39m]\u001b[38;5;241m.\u001b[39mstd()\n\u001b[0;32m      5\u001b[0m numeradorr \u001b[38;5;241m=\u001b[39m \u001b[38;5;28msum\u001b[39m(df[\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mO2Stat\u001b[39m\u001b[38;5;124m'\u001b[39m]\u001b[38;5;241m-\u001b[39m df[\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mO2Stat\u001b[39m\u001b[38;5;124m'\u001b[39m]\u001b[38;5;241m.\u001b[39mmean())\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m4\u001b[39m\n",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\core\\frame.py:3505\u001b[0m, in \u001b[0;36mDataFrame.__getitem__\u001b[1;34m(self, key)\u001b[0m\n\u001b[0;32m   3503\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mcolumns\u001b[38;5;241m.\u001b[39mnlevels \u001b[38;5;241m>\u001b[39m \u001b[38;5;241m1\u001b[39m:\n\u001b[0;32m   3504\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_getitem_multilevel(key)\n\u001b[1;32m-> 3505\u001b[0m indexer \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mcolumns\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mget_loc\u001b[49m\u001b[43m(\u001b[49m\u001b[43mkey\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   3506\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m is_integer(indexer):\n\u001b[0;32m   3507\u001b[0m     indexer \u001b[38;5;241m=\u001b[39m [indexer]\n",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\core\\indexes\\base.py:3623\u001b[0m, in \u001b[0;36mIndex.get_loc\u001b[1;34m(self, key, method, tolerance)\u001b[0m\n\u001b[0;32m   3621\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_engine\u001b[38;5;241m.\u001b[39mget_loc(casted_key)\n\u001b[0;32m   3622\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mKeyError\u001b[39;00m \u001b[38;5;28;01mas\u001b[39;00m err:\n\u001b[1;32m-> 3623\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mKeyError\u001b[39;00m(key) \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;21;01merr\u001b[39;00m\n\u001b[0;32m   3624\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mTypeError\u001b[39;00m:\n\u001b[0;32m   3625\u001b[0m     \u001b[38;5;66;03m# If we have a listlike key, _check_indexing_error will raise\u001b[39;00m\n\u001b[0;32m   3626\u001b[0m     \u001b[38;5;66;03m#  InvalidIndexError. Otherwise we fall through and re-raise\u001b[39;00m\n\u001b[0;32m   3627\u001b[0m     \u001b[38;5;66;03m#  the TypeError.\u001b[39;00m\n\u001b[0;32m   3628\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_check_indexing_error(key)\n",
-      "\u001b[1;31mKeyError\u001b[0m: 'O2Stat'"
-     ]
-    }
-   ],
-   "source": [
-    "# assimetria O2Stat\n",
-    "\n",
-    "mediaa = df['O2Stat'].mean()\n",
-    "desvioo = df['O2Stat'].std()\n",
-    "numeradorr = sum(df['O2Stat']- df['O2Stat'].mean())**4\n",
-    "denominadorr = (desvio)**4\n",
-    "assimetriaa = numerador/denominador\n",
-    "assimetriaa"
    ]
   },
   {
@@ -573,26 +458,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 56,
+   "execution_count": 12,
    "id": "d6816999",
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "3.0976639377055706e-42"
+       "4.142724543219848e-48"
       ]
      },
-     "execution_count": 56,
+     "execution_count": 12,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
     "# curtose \n",
-    "media = df['Salnty'].mean()\n",
-    "desvio = df['Salnty'].std()\n",
-    "numerador = sum(df['Salnty']- df['Salnty'].mean())**4\n",
+    "media = df['O2Sat'].mean()\n",
+    "desvio = df['O2Sat'].std()\n",
+    "numerador = sum(df['O2Sat']- df['O2Sat'].mean())**4\n",
     "denominador = (desvio)**4\n",
     "curtose = numerador/denominador\n",
     "curtose"
@@ -601,18 +486,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "263e29ff",
+   "id": "66ed2c9e",
    "metadata": {},
    "outputs": [],
-   "source": [
-    "# curtose \n",
-    "media = df['Salnty'].mean()\n",
-    "desvio = df['Salnty'].std()\n",
-    "numerador = sum(df['Salnty']- df['Salnty'].mean())**4\n",
-    "denominador = (desvio)**4\n",
-    "curtose = numerador/denominador\n",
-    "curtose"
-   ]
+   "source": []
   }
  ],
  "metadata": {

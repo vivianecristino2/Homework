@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "5435ff81",
+   "id": "ae175632",
    "metadata": {},
    "source": [
     "# Exercicios de Estatisticas \n",
@@ -21,8 +21,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 79,
-   "id": "8fae5aab",
+   "execution_count": 103,
+   "id": "cea91e04",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -37,8 +37,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 80,
-   "id": "0def80b6",
+   "execution_count": 104,
+   "id": "bb0fa76c",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -49,9 +49,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 81,
-   "id": "900e6747",
-   "metadata": {},
+   "execution_count": 105,
+   "id": "d204ee31",
+   "metadata": {
+    "scrolled": true
+   },
    "outputs": [
     {
      "name": "stdout",
@@ -81,8 +83,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 63,
-   "id": "dcda906f",
+   "execution_count": 106,
+   "id": "75739ddb",
    "metadata": {},
    "outputs": [
     {
@@ -104,8 +106,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 64,
-   "id": "a48ac0a0",
+   "execution_count": 107,
+   "id": "a4d3c915",
    "metadata": {},
    "outputs": [
     {
@@ -122,7 +124,7 @@
        "Name: Salnty, dtype: float64"
       ]
      },
-     "execution_count": 64,
+     "execution_count": 107,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -133,7 +135,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "326252c6",
+   "id": "864c1c39",
    "metadata": {},
    "source": [
     "# calcule a variância de todas as variáveis"
@@ -141,8 +143,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 65,
-   "id": "2c1072b9",
+   "execution_count": 108,
+   "id": "c3a13c9f",
    "metadata": {},
    "outputs": [
     {
@@ -309,7 +311,7 @@
        "[774 rows x 6 columns]"
       ]
      },
-     "execution_count": 65,
+     "execution_count": 108,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -320,8 +322,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 66,
-   "id": "f691caa7",
+   "execution_count": 109,
+   "id": "d88108aa",
    "metadata": {},
    "outputs": [
     {
@@ -341,20 +343,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 74,
-   "id": "2893e56a",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# DEsvio O2Stat\n",
-    "\n",
-    "desvios = df['O2Sat'].std()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 53,
-   "id": "9f0d5ffd",
+   "execution_count": 110,
+   "id": "d77c53b6",
    "metadata": {},
    "outputs": [
     {
@@ -363,7 +353,7 @@
        "0.4311762784012086"
       ]
      },
-     "execution_count": 53,
+     "execution_count": 110,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -376,32 +366,8 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": 75,
-   "id": "af70c9ef",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "1421.066460215744"
-      ]
-     },
-     "execution_count": 75,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "# Variancia\n",
-    "\n",
-    "variancia1 = st.variance(df['O2Sat'])\n",
-    "variancia1"
-   ]
-  },
-  {
    "cell_type": "markdown",
-   "id": "8ffff00c",
+   "id": "da11e23b",
    "metadata": {},
    "source": [
     "# Plote as distribuições"
@@ -409,8 +375,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 54,
-   "id": "5769c41f",
+   "execution_count": 111,
+   "id": "c3c0d697",
    "metadata": {},
    "outputs": [
     {
@@ -424,7 +390,7 @@
        " <BarContainer object of 20 artists>)"
       ]
      },
-     "execution_count": 54,
+     "execution_count": 111,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -448,48 +414,8 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": 57,
-   "id": "5dc6d2b6",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "(array([180.,  53.,  36.,  25.,  38.,  23.,  28.,  27.,  15.,  20.,  19.,\n",
-       "         20.,  25.,  26.,  28.,  89.,  76.,  37.,   8.,   1.]),\n",
-       " array([  3.4 ,   9.23,  15.06,  20.89,  26.72,  32.55,  38.38,  44.21,\n",
-       "         50.04,  55.87,  61.7 ,  67.53,  73.36,  79.19,  85.02,  90.85,\n",
-       "         96.68, 102.51, 108.34, 114.17, 120.  ]),\n",
-       " <BarContainer object of 20 artists>)"
-      ]
-     },
-     "execution_count": 57,
-     "metadata": {},
-     "output_type": "execute_result"
-    },
-    {
-     "data": {
-      "image/png": "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\n",
-      "text/plain": [
-       "<Figure size 432x288 with 1 Axes>"
-      ]
-     },
-     "metadata": {
-      "needs_background": "light"
-     },
-     "output_type": "display_data"
-    }
-   ],
-   "source": [
-    "# Plote variavel O2Stat\n",
-    "\n",
-    "plt.hist(df['O2Sat'], bins =20)"
-   ]
-  },
-  {
    "cell_type": "markdown",
-   "id": "c4db58b2",
+   "id": "189e9bdb",
    "metadata": {},
    "source": [
     "# calculando assimetria "
@@ -497,8 +423,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 55,
-   "id": "df25d934",
+   "execution_count": 112,
+   "id": "805f6d92",
    "metadata": {},
    "outputs": [
     {
@@ -507,7 +433,7 @@
        "3.0976639377055706e-42"
       ]
      },
-     "execution_count": 55,
+     "execution_count": 112,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -524,47 +450,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 83,
-   "id": "f83b4257",
-   "metadata": {},
-   "outputs": [
-    {
-     "ename": "KeyError",
-     "evalue": "'O2Stat'",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[1;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\core\\indexes\\base.py:3621\u001b[0m, in \u001b[0;36mIndex.get_loc\u001b[1;34m(self, key, method, tolerance)\u001b[0m\n\u001b[0;32m   3620\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[1;32m-> 3621\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_engine\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mget_loc\u001b[49m\u001b[43m(\u001b[49m\u001b[43mcasted_key\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   3622\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mKeyError\u001b[39;00m \u001b[38;5;28;01mas\u001b[39;00m err:\n",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\_libs\\index.pyx:136\u001b[0m, in \u001b[0;36mpandas._libs.index.IndexEngine.get_loc\u001b[1;34m()\u001b[0m\n",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\_libs\\index.pyx:163\u001b[0m, in \u001b[0;36mpandas._libs.index.IndexEngine.get_loc\u001b[1;34m()\u001b[0m\n",
-      "File \u001b[1;32mpandas\\_libs\\hashtable_class_helper.pxi:5198\u001b[0m, in \u001b[0;36mpandas._libs.hashtable.PyObjectHashTable.get_item\u001b[1;34m()\u001b[0m\n",
-      "File \u001b[1;32mpandas\\_libs\\hashtable_class_helper.pxi:5206\u001b[0m, in \u001b[0;36mpandas._libs.hashtable.PyObjectHashTable.get_item\u001b[1;34m()\u001b[0m\n",
-      "\u001b[1;31mKeyError\u001b[0m: 'O2Stat'",
-      "\nThe above exception was the direct cause of the following exception:\n",
-      "\u001b[1;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
-      "Input \u001b[1;32mIn [83]\u001b[0m, in \u001b[0;36m<cell line: 3>\u001b[1;34m()\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[38;5;66;03m# assimetria O2Stat\u001b[39;00m\n\u001b[1;32m----> 3\u001b[0m mediaa \u001b[38;5;241m=\u001b[39m \u001b[43mdf\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[38;5;124;43mO2Stat\u001b[39;49m\u001b[38;5;124;43m'\u001b[39;49m\u001b[43m]\u001b[49m\u001b[38;5;241m.\u001b[39mmean()\n\u001b[0;32m      4\u001b[0m desvioo \u001b[38;5;241m=\u001b[39m df[\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mO2Stat\u001b[39m\u001b[38;5;124m'\u001b[39m]\u001b[38;5;241m.\u001b[39mstd()\n\u001b[0;32m      5\u001b[0m numeradorr \u001b[38;5;241m=\u001b[39m \u001b[38;5;28msum\u001b[39m(df[\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mO2Stat\u001b[39m\u001b[38;5;124m'\u001b[39m]\u001b[38;5;241m-\u001b[39m df[\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mO2Stat\u001b[39m\u001b[38;5;124m'\u001b[39m]\u001b[38;5;241m.\u001b[39mmean())\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m4\u001b[39m\n",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\core\\frame.py:3505\u001b[0m, in \u001b[0;36mDataFrame.__getitem__\u001b[1;34m(self, key)\u001b[0m\n\u001b[0;32m   3503\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mcolumns\u001b[38;5;241m.\u001b[39mnlevels \u001b[38;5;241m>\u001b[39m \u001b[38;5;241m1\u001b[39m:\n\u001b[0;32m   3504\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_getitem_multilevel(key)\n\u001b[1;32m-> 3505\u001b[0m indexer \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mcolumns\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mget_loc\u001b[49m\u001b[43m(\u001b[49m\u001b[43mkey\u001b[49m\u001b[43m)\u001b[49m\n\u001b[0;32m   3506\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m is_integer(indexer):\n\u001b[0;32m   3507\u001b[0m     indexer \u001b[38;5;241m=\u001b[39m [indexer]\n",
-      "File \u001b[1;32m~\\anaconda3\\lib\\site-packages\\pandas\\core\\indexes\\base.py:3623\u001b[0m, in \u001b[0;36mIndex.get_loc\u001b[1;34m(self, key, method, tolerance)\u001b[0m\n\u001b[0;32m   3621\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_engine\u001b[38;5;241m.\u001b[39mget_loc(casted_key)\n\u001b[0;32m   3622\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mKeyError\u001b[39;00m \u001b[38;5;28;01mas\u001b[39;00m err:\n\u001b[1;32m-> 3623\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mKeyError\u001b[39;00m(key) \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;21;01merr\u001b[39;00m\n\u001b[0;32m   3624\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mTypeError\u001b[39;00m:\n\u001b[0;32m   3625\u001b[0m     \u001b[38;5;66;03m# If we have a listlike key, _check_indexing_error will raise\u001b[39;00m\n\u001b[0;32m   3626\u001b[0m     \u001b[38;5;66;03m#  InvalidIndexError. Otherwise we fall through and re-raise\u001b[39;00m\n\u001b[0;32m   3627\u001b[0m     \u001b[38;5;66;03m#  the TypeError.\u001b[39;00m\n\u001b[0;32m   3628\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_check_indexing_error(key)\n",
-      "\u001b[1;31mKeyError\u001b[0m: 'O2Stat'"
-     ]
-    }
-   ],
-   "source": [
-    "# assimetria O2Stat\n",
-    "\n",
-    "mediaa = df['O2Stat'].mean()\n",
-    "desvioo = df['O2Stat'].std()\n",
-    "numeradorr = sum(df['O2Stat']- df['O2Stat'].mean())**4\n",
-    "denominadorr = (desvio)**4\n",
-    "assimetriaa = numerador/denominador\n",
-    "assimetriaa"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "e183998e",
+   "execution_count": 113,
+   "id": "c45dc755",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -573,8 +460,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 56,
-   "id": "d6816999",
+   "execution_count": 114,
+   "id": "d541b356",
    "metadata": {},
    "outputs": [
     {
@@ -583,27 +470,11 @@
        "3.0976639377055706e-42"
       ]
      },
-     "execution_count": 56,
+     "execution_count": 114,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "source": [
-    "# curtose \n",
-    "media = df['Salnty'].mean()\n",
-    "desvio = df['Salnty'].std()\n",
-    "numerador = sum(df['Salnty']- df['Salnty'].mean())**4\n",
-    "denominador = (desvio)**4\n",
-    "curtose = numerador/denominador\n",
-    "curtose"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "263e29ff",
-   "metadata": {},
-   "outputs": [],
    "source": [
     "# curtose \n",
     "media = df['Salnty'].mean()\n",
